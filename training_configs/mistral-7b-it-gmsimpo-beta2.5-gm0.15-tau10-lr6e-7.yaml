@@ -1,0 +1,49 @@
+# Model arguments
+model_name_or_path: mistralai/Mistral-7B-Instruct-v0.2
+torch_dtype: null
+attn_implementation: flash_attention_2
+
+# Data training arguments
+dataset_mixer:
+  princeton-nlp/mistral-instruct-ultrafeedback: 1.0
+dataset_splits:
+- train
+- test
+preprocessing_num_workers: 20
+
+# XPOTrainer arguments
+bf16: true
+beta: 2.5
+gamma_beta_ratio: 0.15
+length_norm: true
+tau: 10
+trainer_type: simpo
+loss_type: gm-simpo
+do_eval: true
+evaluation_strategy: steps
+eval_steps: 400
+gradient_accumulation_steps: 16
+gradient_checkpointing: true
+gradient_checkpointing_kwargs:
+  use_reentrant: false
+hub_model_id: dpo-exps
+learning_rate: 6.0e-7
+log_level: info
+logging_steps: 5
+lr_scheduler_type: cosine
+max_length: 2048
+max_prompt_length: 1800
+num_train_epochs: 1
+optim: adamw_torch
+output_dir: outputs/mistral-7b-it-gmsimpo-beta2.5-gm0.15-tau10-lr6e-7
+run_name: mistral-7b-it-gmsimpo-beta2.5-gm0.15-tau10-lr6e-7
+per_device_train_batch_size: 2
+per_device_eval_batch_size: 4
+push_to_hub: false
+save_strategy: "steps"
+save_steps: 1000000
+report_to:
+- wandb
+save_total_limit: 1
+seed: 42
+warmup_ratio: 0.1

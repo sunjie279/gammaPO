@@ -1,0 +1,11 @@
+mistral-7b-it-gmsimpo-beta2.5-gm0.15-tau10-lr6e-7:
+  completions_kwargs:
+    batch_size: 900
+    max_new_tokens: 2048
+    model_kwargs:
+      torch_dtype: bfloat16
+    model_name: outputs/mistral-7b-it-gmsimpo-beta2.5-gm0.15-tau10-lr6e-7
+    temperature: 0.5
+  fn_completions: vllm_local_completions
+  pretty_name: mistral-7b-it-gmsimpo-beta2.5-gm0.15-tau10-lr6e-7
+  prompt_template: eval/alpacaeval2/template/mistral_instruct.txt
