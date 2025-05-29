@@ -2,6 +2,8 @@
 
 [![ACL 2025](https://img.shields.io/badge/ACL-2025-success)](https://aclanthology.org/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-blue)](https://github.com/sunjie279/gammaPO)
 
+🎉🎉🎉 Thrilled that our work has been accepted to ACL 2025! 🎉🎉🎉
+
 This repository provides the official implementation of $\gamma$-PO, a novel dynamic target margin preference optimization algorithm for aligning large language models (LLMs) with human preferences. $\gamma$-PO adaptively adjusts target margins at the pairwise level to prioritize high-confidence preference pairs while suppressing noise from ambiguous pairs.
 
 ## Key Features
